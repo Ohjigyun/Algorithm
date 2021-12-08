@@ -50,3 +50,68 @@ rl.on('line', line => {
 })
 
 //2741
+let input = Number(require('fs').readFileSync('/dev/stdin').toString());
+
+let answer = '';
+
+for (let i = 1; i <= input; i++) {
+    answer += i + '\n';
+}
+
+console.log(answer);
+
+
+//2742
+let input = Number(require('fs').readFileSync('/dev/stdin').toString());
+
+let answer = '';
+
+for (let i = input; i >= 1; i--) {
+    answer += i + '\n';
+}
+
+console.log(answer);
+
+//11021
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+let num = 1;
+let answer = '';
+rl.on('line', line => {
+  const input = line.split(' ');
+    
+  if(input.length === 2) {
+    const A = parseInt(input[0]);
+    const B = parseInt(input[1]);
+    answer += `Case #${num}: ${A+B}`+ '\n';
+    num = num+1;
+  }
+}).on('close', () => {
+  console.log(answer);
+  process.exit();
+})  
+
+//11022
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+let num = 1;
+let answer = '';
+rl.on('line', line => {
+  const input = line.split(' ');
+    
+  if(input.length === 2) {
+    const A = parseInt(input[0]);
+    const B = parseInt(input[1]);
+    answer += `Case #${num}: ${A} + ${B} = ${A+B}`+ '\n';
+    num = num+1;
+  }
+}).on('close', () => {
+  console.log(answer);
+  process.exit();
+})  
