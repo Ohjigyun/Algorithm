@@ -115,3 +115,53 @@ rl.on('line', line => {
   console.log(answer);
   process.exit();
 })  
+
+//2438
+var fs = require('fs');
+var input = fs.readFileSync('/dev/stdin').toString().split(' ');
+var a = parseInt(input[0]);
+let str = ''
+let ans = ''
+for(let i = 1 ; i <= a ; i++){
+    str = str + "*"
+    ans = ans + `${str}` + '\n'
+}
+console.log(ans)
+
+//2439
+var fs = require('fs');
+var input = fs.readFileSync('/dev/stdin').toString().split(' ');
+var a = parseInt(input[0]);
+let str = ''
+let copy = ''
+let ans = ''
+for(let i = 1 ; i <= a ; i++){
+    str = str +' '
+}
+let arr = str.split('')
+for(let j = 1 ; j <= a ; j++){
+    copy = arr.slice()
+    copy.splice(a-j , j)
+    for(let k = 1 ; k <= j ; k++){
+        copy.push("*")
+    }
+    ans = ans + copy.join('') + '\n'
+}
+console.log(ans)
+
+
+//10871
+var fs = require('fs');
+var input = fs.readFileSync('/dev/stdin').toString().split('\n');
+var a = input[0].split(' ');
+var b = input[1].split(' ');
+let n = parseInt(a[0]);
+let x = parseInt(a[1]);
+let ans = '';
+for(let i = 0 ; i < n ; i++){
+    if(parseInt(b[i]) < x ){
+        ans = ans + b[i] + ' '
+    }
+}
+
+console.log(ans.slice(0,ans.length-1))
