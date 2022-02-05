@@ -13,9 +13,10 @@ const uniqueArr = arr.filter((el, idx) =>{
 
 // 스프레드로 객체 병합
 
-const a = { ~~ }
-const b = { ~~ }
-const c = { …a , …b}
+// const a = { ~~ }
+// const b = { ~~ }
+// const c = { …a , …b}
+
 //병합시에 같은 키는 마지막에 대입된 value 로 정한다.
 
 // &&와 || 의 활용
