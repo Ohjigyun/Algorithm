@@ -1,9 +1,6 @@
 class MinHeap {
     constructor() {
-        this.heap = [{
-            node : "number",
-            cost : "number"
-        }];
+        this.heap = [null];
     }
 
     push(value) {
