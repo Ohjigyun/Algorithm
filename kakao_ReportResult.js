@@ -1,10 +1,9 @@
 //시간 초과 75 / 100 점 효율성 개선 필요
-
+//2/8 Set 만 해줘도 되는거였다...!! filter+indexOf는 절대 사용하지말자.
 function solution(id_list, report, k) {
     // 동일한 신고건을 제거
-    const newReport = report.filter((item, idx)=>{
-        return report.indexOf(item) === idx
-    })
+    const newReport = [...new Set(report)]
+    
     
     const reportObj = {}
 
