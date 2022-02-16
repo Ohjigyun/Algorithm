@@ -1,5 +1,4 @@
 const binarySearch = function (arr, target) {
-    //단순한 순회로는 왜 통과할수 없을까?? findIndex => 실행 시간 초과 indexOf => 테스트는  통과 이진탐색 구현 x 
     let start = 0;
     let end = arr.length - 1;
   
